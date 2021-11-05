@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="platform-shop" />
+        <module name="platform-schedule" />
+        <module name="platform-api" />
+        <module name="platform-gen" />
+        <module name="platform-admin" />
+        <module name="platform-common" />
+        <module name="platform-framework" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="platform-admin" target="1.8" />
+      <module name="platform-api" target="1.8" />
+      <module name="platform-common" target="1.8" />
+      <module name="platform-framework" target="1.8" />
+      <module name="platform-gen" target="1.8" />
+      <module name="platform-schedule" target="1.8" />
+      <module name="platform-shop" target="1.8" />
+      <module name="wechat-platform" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="platform-admin" options="-verbose -bootclasspath $PROJECT_DIR$/../../jdk1.8.0_102/jre\lib\rt.jar;$PROJECT_DIR$/../../jdk1.8.0_102/jre\lib\jce.jar;" />
+      <module name="platform-api" options="-verbose -bootclasspath $PROJECT_DIR$/../../jdk1.8.0_102/jre\lib\rt.jar;$PROJECT_DIR$/../../jdk1.8.0_102/jre\lib\jce.jar;" />
+      <module name="platform-common" options="-verbose -bootclasspath $PROJECT_DIR$/../../jdk1.8.0_102/jre\lib\rt.jar;$PROJECT_DIR$/../../jdk1.8.0_102/jre\lib\jce.jar;" />
+      <module name="platform-framework" options="-verbose -bootclasspath $PROJECT_DIR$/../../jdk1.8.0_102/jre\lib\rt.jar;$PROJECT_DIR$/../../jdk1.8.0_102/jre\lib\jce.jar;" />
+      <module name="platform-gen" options="-verbose -bootclasspath $PROJECT_DIR$/../../jdk1.8.0_102/jre\lib\rt.jar;$PROJECT_DIR$/../../jdk1.8.0_102/jre\lib\jce.jar;" />
+      <module name="platform-schedule" options="-verbose -bootclasspath $PROJECT_DIR$/../../jdk1.8.0_102/jre\lib\rt.jar;$PROJECT_DIR$/../../jdk1.8.0_102/jre\lib\jce.jar;" />
+      <module name="platform-shop" options="-verbose -bootclasspath $PROJECT_DIR$/../../jdk1.8.0_102/jre\lib\rt.jar;$PROJECT_DIR$/../../jdk1.8.0_102/jre\lib\jce.jar;" />
+    </option>
+  </component>
+</project>
