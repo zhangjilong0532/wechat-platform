@@ -270,6 +270,8 @@ public class ApiPayController extends ApiBaseAction {
             order.setPay_time(new Date());
             orderService.updateStatus(order);
 
+            this.sendSms(order.getAll_order_id());
+
             //1购物车、2普通、3秒杀、4团购
             String orderType = order.getOrder_type();
             //只有购物车、普通购买有分润。
@@ -414,7 +416,6 @@ public class ApiPayController extends ApiBaseAction {
                 response.getWriter().write(setXml("SUCCESS", "OK"));
             } else if (result_code.equalsIgnoreCase("SUCCESS")) {
 
-                this.sendSms(result.getOut_trade_no());
                 Map<Object, Object> retMap = XmlUtil.xmlStrToTreeMap(reponseXml);
                 String sign = WechatUtil.arraySign(retMap, ResourceUtil.getConfigByName("wx.paySignKey"));
                 if (!sign.equals(result.getSign())) {//判断签名
@@ -430,6 +431,9 @@ public class ApiPayController extends ApiBaseAction {
                 orderInfo.setShipping_status(0);
                 orderInfo.setPay_time(new Date());
                 orderService.updateStatus(orderInfo);
+
+                this.sendSms(result.getOut_trade_no());
+
                 Map<String, Object> map = new HashMap<String, Object>();
                 map.put("all_order_id", result.getOut_trade_no());
                 List<OrderVo> lists = orderService.queryList(map);
