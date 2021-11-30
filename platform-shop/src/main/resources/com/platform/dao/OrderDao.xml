@@ -61,7 +61,7 @@
         o.pay_status as payStatus,o.shipping_name as shippingName, o.merchant_id as merchantId,
         o.shipping_no as shippingNo,o.actual_price as actualPrice,  
         o.order_price as orderPrice,o.goods_price as goodsPrice,
-        o.add_time as addTime, g.goods_name, g.list_pic_url,g.id as gid
+        o.add_time as addTime, g.goods_name, g.list_pic_url,g.id as gid,O.pay_id as payId
         FROM nideshop_order o 
         LEFT JOIN nideshop_user u ON o.user_id = u.id
         LEFT JOIN nideshop_order_goods g ON o.id = g.order_id
